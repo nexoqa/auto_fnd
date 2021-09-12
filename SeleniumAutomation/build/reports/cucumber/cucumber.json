@@ -1,0 +1,156 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-09-11T17:25:38.994Z",
+        "line": 4,
+        "name": "login",
+        "description": "",
+        "id": "login-into-application;login",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 14624000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am on the HomePage",
+            "match": {
+              "location": "org.example.Steps.HomePageSteps.i_am_on_the_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2919000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user fills the login mandatory field: \"nexoqa1@gmail.com\" and \"password123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"nexoqa1@gmail.com\"",
+                  "offset": 42
+                },
+                {
+                  "val": "\"password123\"",
+                  "offset": 66
+                }
+              ],
+              "location": "org.example.Steps.SignInPageSteps.theUserFillTheLoginForm(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 95000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the ecommerce should be show a error feedback",
+            "match": {
+              "location": "org.example.Steps.SignInPageSteps.theAppShowAErrorMsg()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login"
+          }
+        ]
+      }
+    ],
+    "name": "login into application",
+    "description": "",
+    "id": "login-into-application",
+    "keyword": "Feature",
+    "uri": "classpath:features//Login.feature",
+    "tags": [
+      {
+        "name": "@login",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-09-11T17:25:56.726Z",
+        "line": 4,
+        "name": "Register new account",
+        "description": "",
+        "id": "check-the-correct-behavior-of-the-register-features;register-new-account",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3839000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user wants to register in the ecommerce",
+            "match": {
+              "location": "org.example.Steps.RegisterPageSteps.theUserWantsRegisterInEcommerce()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5404000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user fill the register form",
+            "match": {
+              "location": "org.example.Steps.RegisterPageSteps.theUserFillTheRegisterForm()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 42000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user should be registered",
+            "match": {
+              "location": "org.example.Steps.RegisterPageSteps.theUserShouldBeRegistered()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@register"
+          }
+        ]
+      }
+    ],
+    "name": "Check the correct behavior of the register features",
+    "description": "",
+    "id": "check-the-correct-behavior-of-the-register-features",
+    "keyword": "Feature",
+    "uri": "classpath:features//Register.feature",
+    "tags": [
+      {
+        "name": "@register",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
