@@ -20,7 +20,7 @@ public class RegisterPageSteps {
     public void theUserFillTheRegisterForm() throws InterruptedException {
         Thread.sleep(2000);
         SignInPage.goToRegisterForm("nexoqa@gmail.com");
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         RegisterPage.fillRegisterForm(0);
         RegisterPage.submitButton();
     }

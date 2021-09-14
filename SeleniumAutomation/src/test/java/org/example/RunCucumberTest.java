@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
         features = "classpath:features/",
         plugin = { "json:build/reports/cucumber/cucumber.json", "pretty", "html:build/reports/cucumber/cucumber-reports.html"},
         glue = "org.example.Steps",
-        publish = false
+        publish = false,
+        tags = "@search"
 )
 public class RunCucumberTest {
 
