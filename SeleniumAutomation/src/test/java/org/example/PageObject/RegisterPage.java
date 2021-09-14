@@ -16,12 +16,20 @@ public class RegisterPage {
         return $(By.id("days"));
     }
 
+    public static SelenideElement birthMonthSelect() {
+        return $(By.id("months"));
+    }
+
+    public static SelenideElement birthYearSelect() {
+        return $(By.id("years"));
+    }
+
     public static SelenideElement genderMrRadioBtn() {
-        return $(By.id("id_gender1"));
+        return $(By.id("uniform-id_gender1"));
     }
 
     public static SelenideElement firstName() {
-        return $(By.id("firstname"));
+        return $(By.id("customer_firstname"));
     }
 
     public static SelenideElement lastName() {
@@ -65,7 +73,15 @@ public class RegisterPage {
     }
 
     public static SelenideElement signOutButton() {
-        return $(By.cssSelector("#header > div.nav > div > div > nav > div:nth-child(2) > a"));
+        return $(By.className("logout"));
+    }
+
+    public static SelenideElement myAccountInfo() {
+        return $(By.cssSelector("#center_column > h1"));
+    }
+
+    public static SelenideElement alertMessage() {
+        return $(By.className("alert-danger"));
     }
 
     //Actions
@@ -74,7 +90,7 @@ public class RegisterPage {
         setFirstName("Pepe");
         setLastName("Mesas");
         setPassword("password123");
-        selectBirthDay(10);
+        selectBirthDate(10, 2, 1996);
         setAddress("Calle nexoqa");
         setCity("Alicante");
         setState("Colorado");
@@ -88,9 +104,14 @@ public class RegisterPage {
         RegisterPage.genderMrRadioBtn();
     }
 
-    public static void selectBirthDay(Integer day) {
+    public static void selectBirthDate(Integer day, Integer month, Integer year) {
         Select selectBirthDay = new Select(RegisterPage.birthDaySelect());
+        Select selectBirthMonth = new Select(RegisterPage.birthMonthSelect());
+        Select selectBirthYear = new Select(RegisterPage.birthYearSelect());
+
         selectBirthDay.selectByIndex(day);
+        selectBirthMonth.selectByIndex(month);
+        selectBirthYear.selectByValue(year.toString());
     }
 
     public static void setFirstName(String firstName) {
@@ -135,5 +156,9 @@ public class RegisterPage {
 
     public static void registerButton() {
         submitButton().click();
+    }
+
+    public static String getMyAccountText() {
+        return RegisterPage.myAccountInfo().getText();
     }
 }

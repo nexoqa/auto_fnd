@@ -6,6 +6,7 @@ import io.cucumber.java.en.When;
 import org.example.PageObject.HomePage;
 import org.example.PageObject.RegisterPage;
 import org.example.PageObject.SignInPage;
+import org.junit.Assert;
 
 import static com.codeborne.selenide.Selenide.open;
 
@@ -22,12 +23,14 @@ public class RegisterPageSteps {
         SignInPage.goToRegisterForm("nexoqa@gmail.com");
         Thread.sleep(5000);
         RegisterPage.fillRegisterForm(0);
-        RegisterPage.submitButton();
+        RegisterPage.registerButton();
     }
 
     @Then("the user should be registered")
-    public void theUserShouldBeRegistered() {
-        RegisterPage.signOutButton().isDisplayed();
+    public void theUserShouldBeRegistered() throws InterruptedException {
+        RegisterPage.myAccountInfo().isDisplayed();
+        Assert.assertEquals("MY ACCOUNT", RegisterPage.getMyAccountText());
+        RegisterPage.signOutButton().click();
     }
 
 }

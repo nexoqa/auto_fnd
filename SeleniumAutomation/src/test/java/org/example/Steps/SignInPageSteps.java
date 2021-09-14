@@ -3,6 +3,7 @@ package org.example.Steps;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.PageObject.HomePage;
+import org.example.PageObject.RegisterPage;
 import org.example.PageObject.SignInPage;
 import org.junit.Assert;
 
@@ -15,9 +16,16 @@ public class SignInPageSteps {
         //Thread.sleep(2000);
     }
 
-    @Then("^the ecommerce should be show a error feedback$")
+    @Then("the ecommerce should be show a error feedback")
     public void theAppShowAErrorMsg() {
         Assert.assertTrue(SignInPage.getErrorMessage().contains("Authentication failed"));
+    }
+
+    @Then("the user is logged")
+    public void theUserIsLogged() {
+        RegisterPage.myAccountInfo().isDisplayed();
+        Assert.assertEquals("MY ACCOUNT", RegisterPage.getMyAccountText());
+        RegisterPage.signOutButton().click();
     }
 
 }
