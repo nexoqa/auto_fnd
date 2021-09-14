@@ -1,3 +1,4 @@
+@shopping
 Feature: Shopping cart
 
   Scenario: Verify the ability to add and delete items from cart

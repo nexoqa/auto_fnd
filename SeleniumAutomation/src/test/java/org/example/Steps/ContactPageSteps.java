@@ -1,11 +1,17 @@
 package org.example.Steps;
 
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.commands.WaitUntil;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.PageObject.ContactPage;
 import org.example.PageObject.HomePage;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.Wait;
+
+import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selenide.Wait;
 import static org.hamcrest.CoreMatchers.containsString;
 
 
@@ -26,6 +32,7 @@ public class ContactPageSteps {
 
     @Then("Contact us page should have a success message")
     public void contactus_page_should_have_a_success_message() {
+        ContactPage.alertSuccessMessage().waitUntil(visible, 5000);
         Assert.assertEquals("Your message has been successfully sent to our team.", ContactPage.getSuccessMessage());
     }
 

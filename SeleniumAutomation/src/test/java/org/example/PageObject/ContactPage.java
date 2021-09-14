@@ -23,11 +23,11 @@ public class ContactPage {
     public static SelenideElement submitButton () { return $(By.id("submitMessage"));}
 
     public static SelenideElement alertSuccessMessage() {
-        return $(By.className("alert alert-success"));
+        return $(By.className("alert-success"));
     }
 
     public static SelenideElement alertDangerMessage() {
-        return $(By.className("alert alert-danger"));
+        return $(By.className("alert-danger"));
     }
 
     //Actions

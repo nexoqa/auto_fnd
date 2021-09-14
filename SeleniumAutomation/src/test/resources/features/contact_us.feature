@@ -1,3 +1,4 @@
+@contact
 Feature: Contact Us
 
   Scenario: Verify that the contact us form sends successfully
@@ -10,4 +11,4 @@ Feature: Contact Us
 
     Given I am on the contact us page
     When I complete the contact us form except the message
-    Then Contact us page should have error message: The message cannot be blank
+    Then Contact us page should have error message: "The message cannot be blank"
