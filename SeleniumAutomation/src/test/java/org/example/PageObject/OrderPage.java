@@ -83,6 +83,8 @@ public class OrderPage {
         switch(item){
             case "Dress": itemNumber = 5;
                 break;
+            case "Printed Summer Dress": itemNumber = 5;
+                break;
             default: itemNumber = -1;
         }
 

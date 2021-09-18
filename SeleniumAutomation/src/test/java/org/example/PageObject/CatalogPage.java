@@ -1,75 +1,50 @@
 package org.example.PageObject;
 
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 
 
 public class CatalogPage {
 
     //Locators
-    public static SelenideElement subjectContact() {
-        return $(By.id("id_contact"));
+    public static SelenideElement womenCategory() {
+        return $(By.xpath("//*[@id='block_top_menu']//*[@title='Women']"));
     }
 
-    public static SelenideElement email() { return $(By.id("email"));}
-
-    public static SelenideElement orderReference() { return $(By.id("id_order"));}
-
-    public static SelenideElement message() { return $(By.id("message"));}
-
-    public static SelenideElement submitButton () { return $(By.id("submitMessage"));}
-
-    public static SelenideElement alertSuccessMessage() {
-        return $(By.className("alert-success"));
+    public static SelenideElement categoryTShirts() {
+        return $(By.xpath("//*[@id='block_top_menu']//*[@title='T-shirts']"));
     }
 
-    public static SelenideElement alertDangerMessage() {
-        return $(By.className("alert-danger"));
+    public static SelenideElement itemResultsCatalog() {
+        return $(By.xpath("//*[@id='category']//*[@class='product-container']//*[@class='product-name']"));
+    }
+
+    public static SelenideElement itemsCounter() {
+        return $(By.className("heading-counter"));
+    }
+
+    public static SelenideElement displayedItems() {
+        //return $(By.xpath("//*[@id='category']//*[@class='product-container']//*[@class='product-name']"));
+        return $(By.xpath("//*[@class='product-container']"));
     }
 
     //Actions
-    public static void selectSubjectContact(String select) {
-        CatalogPage.subjectContact().selectOption(select);
+    public static void selectTShirtsCatalog() {
+        womenCategory().hover();
+        categoryTShirts().shouldBe(appear).click();
     }
 
-    public static void setEmail(String email) {
-        CatalogPage.email().sendKeys(email);
+    public static String retrieveItemsCounter() {
+        return itemsCounter().getText();
     }
 
-    public static void setOrderReference (String order) {
-        CatalogPage.orderReference().sendKeys(order);
-    }
-
-    public static void setMessage(String message) {
-        CatalogPage.message().sendKeys(message);
-    }
-
-    public static void submitClick() {
-        CatalogPage.submitButton().click();
-    }
-
-    public static void fillContactUsForm () {
-        selectSubjectContact("Customer service");
-        setEmail("prueba@gmail.com");
-        setOrderReference("1111111");
-        setMessage("This a text from text for text for testing for test test test");
-        submitClick();
-    }
-
-    public static void fillPartiallyContactUsForm () {
-        selectSubjectContact("Customer service");
-        setEmail("prueba@gmail.com");
-        setOrderReference("1111111");
-        submitClick();
-    }
-
-    public static String getSuccessMessage() {
-        return CatalogPage.alertSuccessMessage().getText();
-    }
-
-    public static String getDangerMessage() {
-        return CatalogPage.alertDangerMessage().getText();
+    public static void checkDisplayedItems(String item) {
+        displayedItems().waitUntil(visible, 5000);
+        displayedItems().getText().contains(item);
     }
 }

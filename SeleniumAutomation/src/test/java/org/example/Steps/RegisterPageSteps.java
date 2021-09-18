@@ -20,7 +20,7 @@ public class RegisterPageSteps {
     @When("the user fill the register form")
     public void theUserFillTheRegisterForm() throws InterruptedException {
         Thread.sleep(2000);
-        SignInPage.goToRegisterForm("nexoqa100@gmail.com");
+        SignInPage.goToRegisterForm("nexoqa101@gmail.com");
         Thread.sleep(5000);
         RegisterPage.fillRegisterForm(0);
         RegisterPage.registerButton();
