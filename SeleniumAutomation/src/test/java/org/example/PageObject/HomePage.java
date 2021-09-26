@@ -32,6 +32,10 @@ public class HomePage {
         return $(By.className("product-container"));
     }
 
+    public static SelenideElement emptyResults() {
+        return $(By.className("alert-warning"));
+    }
+
     //Actions
     public static void goToSignInForm() {
         HomePage.login().click();
@@ -48,6 +52,10 @@ public class HomePage {
 
     public static void verifyItem(String item) {
         Assert.assertThat(HomePage.itemText().getText(), containsString(item));
+    }
+
+    public static String verifyItemIsNotPresent() {
+       return HomePage.emptyResults().getText();
     }
 
 }

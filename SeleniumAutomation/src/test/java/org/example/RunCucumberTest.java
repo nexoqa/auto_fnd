@@ -17,8 +17,8 @@ import static com.codeborne.selenide.Selenide.open;
         features = "classpath:features/",
         plugin = { "json:build/reports/cucumber/cucumber.json", "pretty", "html:build/reports/cucumber/cucumber-reports.html"},
         glue = "org.example.Steps",
-        publish = false,
-        tags = "@catalog"
+        publish = false
+        //tags = "@search"
 )
 public class RunCucumberTest {
 
@@ -27,6 +27,7 @@ public class RunCucumberTest {
         Configuration.startMaximized = true;
         Configuration.browserSize = null;
         Configuration.browser = "chrome";
+        Configuration.headless = true;
         open();
     }
 

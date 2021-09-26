@@ -4,11 +4,10 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.PageObject.HomePage;
-import org.example.PageObject.RegisterPage;
-import org.example.PageObject.SignInPage;
-import org.openqa.selenium.support.ui.Select;
+import org.junit.Assert;
 
 import static com.codeborne.selenide.Selenide.open;
+import static org.hamcrest.CoreMatchers.containsString;
 
 public class HomePageSteps {
 
@@ -26,5 +25,11 @@ public class HomePageSteps {
     public void item_should_be_in_the_search_results (String item) throws InterruptedException {
         Thread.sleep(5000);
         HomePage.verifyItem(item);
+    }
+
+    @Then("{string} should not be in the search results")
+    public void item_should_not_be_in_the_search_results (String item) throws InterruptedException {
+        Thread.sleep(5000);
+        Assert.assertEquals(HomePage.verifyItemIsNotPresent(), "No results were found for your search \"" + item + "\"");
     }
 }
