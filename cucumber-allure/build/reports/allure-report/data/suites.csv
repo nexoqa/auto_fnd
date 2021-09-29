@@ -1,0 +1,4 @@
+"Status","Name","Duration in ms","Description"
+"failed","Search in google: Search and get result count","4705",""
+"passed","Search in google: Search and get result count","5730",""
+"failed","Search in google: Search and get result count","4765",""

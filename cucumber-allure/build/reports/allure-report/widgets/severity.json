@@ -1,0 +1,31 @@
+[ {
+  "uid" : "f0d8f6f8dc8c338c",
+  "name" : "Search and get result count",
+  "time" : {
+    "start" : 1632934318347,
+    "stop" : 1632934323052,
+    "duration" : 4705
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "5d46111a849e15d8",
+  "name" : "Search and get result count",
+  "time" : {
+    "start" : 1632934307765,
+    "stop" : 1632934313495,
+    "duration" : 5730
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "faea510276afd2f5",
+  "name" : "Search and get result count",
+  "time" : {
+    "start" : 1632934313573,
+    "stop" : 1632934318338,
+    "duration" : 4765
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]

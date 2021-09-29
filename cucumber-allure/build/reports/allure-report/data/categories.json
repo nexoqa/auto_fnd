@@ -1,0 +1,41 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "Element not found {By.id: L2AGLb}\nExpected: visible or transparent: visible or have css value opacity=0\nScreenshot: file:/C:/git-nexoqa/nexoqa/cucumber-allure/build/reports/tests/1632934318128.0.png\nPage source: file:/C:/git-nexoqa/nexoqa/cucumber-allure/build/reports/tests/1632934318128.0.html\nTimeout: 4 s.\nCaused by: NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#L2AGLb\"}",
+      "children" : [ {
+        "name" : "Search and get result count",
+        "uid" : "faea510276afd2f5",
+        "parentUid" : "3de64ba76493c272a30e2fe89c611d99",
+        "status" : "failed",
+        "time" : {
+          "start" : 1632934313573,
+          "stop" : 1632934318338,
+          "duration" : 4765
+        },
+        "flaky" : false,
+        "parameters" : [ "\"sahana\"" ]
+      } ],
+      "uid" : "3de64ba76493c272a30e2fe89c611d99"
+    }, {
+      "name" : "Element not found {By.id: L2AGLb}\nExpected: visible or transparent: visible or have css value opacity=0\nScreenshot: file:/C:/git-nexoqa/nexoqa/cucumber-allure/build/reports/tests/1632934322845.1.png\nPage source: file:/C:/git-nexoqa/nexoqa/cucumber-allure/build/reports/tests/1632934322845.1.html\nTimeout: 4 s.\nCaused by: NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#L2AGLb\"}",
+      "children" : [ {
+        "name" : "Search and get result count",
+        "uid" : "f0d8f6f8dc8c338c",
+        "parentUid" : "66b45edc448720547f81b8acec943a10",
+        "status" : "failed",
+        "time" : {
+          "start" : 1632934318347,
+          "stop" : 1632934323052,
+          "duration" : 4705
+        },
+        "flaky" : false,
+        "parameters" : [ "\"ggffghgfgfhfghfghfghfghfghfghfghfghgfhgfhfghfgh sdfsfwefwefwe werewrwer\"" ]
+      } ],
+      "uid" : "66b45edc448720547f81b8acec943a10"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
