@@ -1,0 +1,286 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-09-30T10:41:30.363Z",
+        "line": 13,
+        "name": "order samsung galaxy s6 and Sony vaio i5",
+        "description": "",
+        "id": "make-an-order;order-samsung-galaxy-s6-and-sony-vaio-i5;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2732000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am on the HomePage",
+            "match": {
+              "location": "Steps.SignUpPageSteps.i_am_on_the_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1672000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I add \"Samsung galaxy s6\" item into the cart",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Samsung galaxy s6\"",
+                  "offset": 6
+                }
+              ],
+              "location": "Steps.CartPageSteps.i_add_item_into_the_cart(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1180000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I can see the product \"Samsung galaxy s6\" in the cart",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Samsung galaxy s6\"",
+                  "offset": 22
+                }
+              ],
+              "location": "Steps.CartPageSteps.i_can_see_the_product_in_the_cart(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 950000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I place the order and fill the mandatory fields",
+            "match": {
+              "location": "Steps.CartPageSteps.i_place_the_order_and_fill_mandatory_fields()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 34000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I can see the successful purchase",
+            "match": {
+              "location": "Steps.CartPageSteps.i_can_see_the_successful_purchase()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@cart"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-09-30T10:41:37.009Z",
+        "line": 14,
+        "name": "order samsung galaxy s6 and Sony vaio i5",
+        "description": "",
+        "id": "make-an-order;order-samsung-galaxy-s6-and-sony-vaio-i5;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 107000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am on the HomePage",
+            "match": {
+              "location": "Steps.SignUpPageSteps.i_am_on_the_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1533000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I add \"Sony vaio i5\" item into the cart",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sony vaio i5\"",
+                  "offset": 6
+                }
+              ],
+              "location": "Steps.CartPageSteps.i_add_item_into_the_cart(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat Steps.CartPageSteps.i_can_see_the_product_in_the_cart(CartPageSteps.java:25)\r\n\tat ✽.I can see the product \"Sony vaio i5\" in the cart(classpath:features//cart.feature:7)\r\n",
+              "duration": 1208000000,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "I can see the product \"Sony vaio i5\" in the cart",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sony vaio i5\"",
+                  "offset": 22
+                }
+              ],
+              "location": "Steps.CartPageSteps.i_can_see_the_product_in_the_cart(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "I place the order and fill the mandatory fields",
+            "match": {
+              "location": "Steps.CartPageSteps.i_place_the_order_and_fill_mandatory_fields()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "I can see the successful purchase",
+            "match": {
+              "location": "Steps.CartPageSteps.i_can_see_the_successful_purchase()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@cart"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-09-30T10:41:39.872Z",
+        "line": 15,
+        "name": "order samsung galaxy s6 and Sony vaio i5",
+        "description": "",
+        "id": "make-an-order;order-samsung-galaxy-s6-and-sony-vaio-i5;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 205000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am on the HomePage",
+            "match": {
+              "location": "Steps.SignUpPageSteps.i_am_on_the_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1380000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I add \"Nexus 6\" item into the cart",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Nexus 6\"",
+                  "offset": 6
+                }
+              ],
+              "location": "Steps.CartPageSteps.i_add_item_into_the_cart(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1053000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I can see the product \"Nexus 6\" in the cart",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Nexus 6\"",
+                  "offset": 22
+                }
+              ],
+              "location": "Steps.CartPageSteps.i_can_see_the_product_in_the_cart(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 956000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I place the order and fill the mandatory fields",
+            "match": {
+              "location": "Steps.CartPageSteps.i_place_the_order_and_fill_mandatory_fields()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 35000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I can see the successful purchase",
+            "match": {
+              "location": "Steps.CartPageSteps.i_can_see_the_successful_purchase()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@cart"
+          }
+        ]
+      }
+    ],
+    "name": "make an order",
+    "description": "",
+    "id": "make-an-order",
+    "keyword": "Feature",
+    "uri": "classpath:features//cart.feature",
+    "tags": [
+      {
+        "name": "@cart",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
