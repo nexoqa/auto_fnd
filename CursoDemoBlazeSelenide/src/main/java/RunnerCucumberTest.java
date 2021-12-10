@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
                 "json:target/reports/cucumber/cucumber.json",
                 "pretty"
         },
-        tags = "@cart"
+        tags = "@signup"
 )
 public class RunnerCucumberTest {
 

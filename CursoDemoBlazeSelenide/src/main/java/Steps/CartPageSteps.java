@@ -18,7 +18,7 @@ public class CartPageSteps {
     public void i_add_item_into_the_cart(String item){
         getGenericLinkItem(item).click();
         CartPage.clickOnAddToCartButton();
-        Assert.assertEquals("Product added", switchTo().alert().getText());
+        Assert.assertEquals(switchTo().alert().getText(), "Product added");
     }
 
     @Then("I can see the product {string} in the cart")
