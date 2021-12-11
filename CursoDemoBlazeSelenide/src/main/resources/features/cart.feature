@@ -9,4 +9,4 @@ Feature: make an order
     Examples:
       | product             |
       | "Samsung galaxy s6" |
-      | "Sony vaio i5"      |
+      | "Sony vaio i7"      |
