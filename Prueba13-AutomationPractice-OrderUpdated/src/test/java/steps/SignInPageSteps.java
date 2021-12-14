@@ -9,7 +9,7 @@ import org.junit.Assert;
 public class SignInPageSteps {
 
     @When("the user fills the login mandatory field: {string} and {string}")
-    public void theUserFillTheLoginForm(String email, String password) throws InterruptedException {
+    public void theUserFillTheLoginForm(String email, String password) {
         HomePage.goToSignInForm();
         SignInPage.fillLoginForm(email, password);
         HomePageSteps.i_am_on_the_homepage();

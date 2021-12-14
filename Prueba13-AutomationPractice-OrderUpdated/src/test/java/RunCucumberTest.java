@@ -16,7 +16,7 @@ import static com.codeborne.selenide.Selenide.open;
                 "html:build/reports/cucumber/cucumber-reports.html"
         },
         publish = false,
-        tags = "@order"
+        tags = "@search"
 )
 public class RunCucumberTest {
 
